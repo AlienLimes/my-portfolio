@@ -1,0 +1,41 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  color: #666;
+  margin-top: 0;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-list h3 {
+  margin: 0 0 0.25rem 0;
+}
