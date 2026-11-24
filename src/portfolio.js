@@ -2,7 +2,7 @@ export const profile = {
   name: "Krisztina Molnar",
   tagline: "Third year SETU Creative computing student",
   about:
-    "Under development",
+    "Under development will add later",
 };
 
 export const projects = [
@@ -16,4 +16,10 @@ export const projects = [
     description: "description ",
     link: "https://github.com/yourusername/project-two",
   },
+];
+
+export const socials = [
+  { name: 'GitHub', url: 'https://github.com/AlienLimes', icon: 'Github' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: 'Linkedin' },
+  { name: 'Email', url: 'mailto:your@email.com', icon: 'Mail' },
 ];
