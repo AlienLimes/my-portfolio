@@ -16,6 +16,12 @@ export default function Contact() {
         {/* A little piece of tape decor for the footer */}
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-rose-100/60 rotate-2 shadow-sm border border-rose-200/50 backdrop-blur-sm"></div>
 
+                  {/* A little handwritten note inside the card */}
+        <div className="absolute -bottom-6 -right-4 text-rose-400/60 font-serif italic text-xl rotate-6 pointer-events-none">
+          P.S. Let's build something cool!
+        </div>
+
+
         <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">Let's Connect</h2>
         <p className="text-stone-500 mb-8">
           Whether you have a question, a project idea, or just want to say hi, my inbox is always open.

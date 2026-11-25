@@ -17,8 +17,16 @@ function App() {
       {!isLoaded && <TerminalLoader onComplete={() => setIsLoaded(true)} />}
 
       {/* 2. MAIN PAGE WRAPPER: Fades in once loading is complete */}
-      <div className={`min-h-screen bg-[#f8f9fa] bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] text-stone-800 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+      {/* <div className={`min-h-screen bg-[#f8f9fa] bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] text-stone-800 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+         */}
+          <div className={`min-h-screen bg-[#f8f9fa] bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px] text-stone-800 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'} relative`}>
         
+        {/* Coffee Stain Decor */}
+        <div className="fixed top-20 right-10 w-48 h-48 rounded-full border-[8px] border-[#d4a373]/20 pointer-events-none z-0 blur-[1px]"></div>
+        <div className="fixed bottom-40 left-10 w-32 h-32 rounded-full border-4 border-[#d4a373]/10 pointer-events-none z-0 blur-[2px]"></div>
+
+
+
         <Navbar />
         
         <Hero />
@@ -62,7 +70,7 @@ function App() {
             <div className="absolute top-[90px] left-0 w-full flex justify-center z-0 opacity-60 pointer-events-none">
               <svg viewBox="0 0 1200 100" className="w-full min-w-[1200px] h-24" preserveAspectRatio="none">
                 {/* Gentler curve: dips slightly in the middle */}
-                <path d="M 0,30 Q 600,70 1200,30" fill="transparent" stroke="#a8a29e" strokeWidth="3" strokeLinecap="round" />
+                <path d="M 0,30 Q 600,70 1200,30" fill="transparent" stroke="#777371" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </div>
 
