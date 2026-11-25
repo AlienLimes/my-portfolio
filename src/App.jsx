@@ -23,7 +23,7 @@ function App() {
         
         <Hero />
 
-        <main className="max-w-4xl mx-auto px-6 py-24">
+        <main className="max-w-7xl mx-auto px-6 py-24">
           
           {/* ABOUT SECTION: Styled as a piece of paper with a binder clip */}
           <section id="about" className="mb-32 relative max-w-2xl mx-auto pt-8">
@@ -47,21 +47,88 @@ function App() {
             </div>
           </section>
 
-          {/* PROJECTS SECTION: This is where we will build the hanging string next! */}
-          <section id="projects">
-            <h2 className="text-sm font-bold tracking-widest uppercase text-stone-400 mb-8 text-center">Projects</h2>
-            <ul className="grid gap-8 md:grid-cols-2">
-              {projects.map((project) => (
-                <li key={project.title} className="bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
-                  <h3 className="text-xl font-serif text-stone-900 mb-3">{project.title}</h3>
-                  <p className="text-stone-500 mb-6 leading-relaxed">{project.description}</p>
-                  <a href={project.link} target="_blank" rel="noreferrer" className="text-sm font-medium text-stone-900 underline underline-offset-4 decoration-stone-300 hover:decoration-stone-900 transition-colors">
-                    View project
-                  </a>
+
+
+
+
+
+
+
+                     {/* PROJECTS SECTION: The Hanging String */}
+          <section id="projects" className="py-20 relative overflow-hidden">
+            
+            {/* The Organic String */}
+            {/* Changed to z-0 so it sits behind the clips but above the background */}
+            <div className="absolute top-[90px] left-0 w-full flex justify-center z-0 opacity-60 pointer-events-none">
+              <svg viewBox="0 0 1200 100" className="w-full min-w-[1200px] h-24" preserveAspectRatio="none">
+                {/* Gentler curve: dips slightly in the middle */}
+                <path d="M 0,30 Q 600,70 1200,30" fill="transparent" stroke="#a8a29e" strokeWidth="3" strokeLinecap="round" />
+              </svg>
+            </div>
+
+            <div className="max-w-[1100px] mx-auto px-4 relative z-10">
+              <ul className="flex justify-center gap-8 pt-20">
+                
+                {projects.map((project, index) => (
+                  <li key={project.title} className="relative group w-56 shrink-0">
+                    
+                    {/* The Clothespin */}
+                    <div className="absolute -top-[40px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center drop-shadow-md">
+                      <div className="w-2 h-6 border-2 border-stone-400 bg-stone-200 rounded-sm z-10"></div>
+                      <div className="absolute top-1 w-4 h-6 bg-[#d4a373] rounded-sm rotate-6 border border-[#b5835a]"></div>
+                      <div className="absolute top-1 w-4 h-6 bg-[#d4a373] rounded-sm -rotate-6 border border-[#b5835a]"></div>
+                    </div>
+
+                    {/* The Polaroid Card */}
+                    <div className="bg-white p-3 pb-6 shadow-[0_8px_15px_-8px_rgba(0,0,0,0.15)] border border-stone-200 transform transition-transform duration-300 hover:scale-105 hover:-rotate-1">
+                      
+                      <div className="w-full h-32 bg-stone-100 rounded-sm mb-3 flex items-center justify-center border border-stone-200">
+                         <span className="text-stone-400 text-xs font-mono">Project Image</span>
+                      </div>
+
+                      <h3 className="text-base font-serif font-bold text-stone-900 mb-1">{project.title}</h3>
+                      <p className="text-xs text-stone-500 mb-3 line-clamp-2">{project.description}</p>
+                      
+                      <a href={project.link} target="_blank" rel="noreferrer" className="text-[10px] font-bold text-stone-900 uppercase tracking-wider underline underline-offset-4 decoration-stone-300 hover:decoration-stone-900 transition-colors">
+                        View Project
+                      </a>
+                    </div>
+                  </li>
+                ))}
+
+                {/* The Empty "Coming Soon" Card */}
+                <li className="relative w-56 shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute -top-[40px] left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+                    <div className="w-2 h-6 border-2 border-stone-400 bg-stone-200 rounded-sm z-10"></div>
+                    <div className="absolute top-1 w-4 h-6 bg-[#d4a373] rounded-sm rotate-6 border border-[#b5835a]"></div>
+                    <div className="absolute top-1 w-4 h-6 bg-[#d4a373] rounded-sm -rotate-6 border border-[#b5835a]"></div>
+                  </div>
+
+                  <div className="bg-stone-50 border-2 border-dashed border-stone-300 p-4 h-[250px] flex flex-col items-center justify-center text-center">
+                    <h3 className="text-base font-serif text-stone-500 mb-1">Next Project</h3>
+                    <p className="text-xs text-stone-400">Currently thinking about what to make...</p>
+                  </div>
                 </li>
-              ))}
-            </ul>
+
+              </ul>
+            </div>
           </section>
+
+
+          
+
+          
+
+
+
+
+
+
+
+
+
+
+
         </main>
 
         <Contact />

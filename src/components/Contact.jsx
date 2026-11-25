@@ -10,22 +10,25 @@ const iconMap = {
 
 export default function Contact() {
   return (
-    <footer id="contact" className="bg-slate-900 border-t border-slate-800 py-16 px-6 text-center">
-      <div className="max-w-2xl mx-auto">
+    <footer id="contact" className="py-20 px-6 text-center relative">
+      <div className="max-w-2xl mx-auto bg-white p-10 md:p-14 shadow-md border border-stone-200 rounded-sm relative">
         
-        <h2 className="text-3xl font-bold text-white mb-4">Let's Connect</h2>
-        <p className="text-slate-400 mb-8">
+        {/* A little piece of tape decor for the footer */}
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-rose-100/60 rotate-2 shadow-sm border border-rose-200/50 backdrop-blur-sm"></div>
+
+        <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">Let's Connect</h2>
+        <p className="text-stone-500 mb-8">
           Whether you have a question, a project idea, or just want to say hi, my inbox is always open.
         </p>
 
         <a 
-          href="mailto:your@email.com" 
-          className="inline-block px-8 py-3 rounded-full bg-orange-500 text-slate-900 font-semibold hover:bg-orange-400 transition-colors duration-300 mb-12"
+          href="mailto:your@email.com" // <-- Update this later
+          className="inline-block px-8 py-3 rounded-full bg-stone-800 text-white font-medium hover:bg-stone-700 transition-colors duration-300 mb-12 shadow-sm"
         >
           Say Hello
         </a>
 
-        <div className="flex justify-center gap-6 mb-12 text-slate-400">
+        <div className="flex justify-center gap-6 mb-8 text-stone-400">
           {socials.map((social) => {
             const Icon = iconMap[social.icon]
             return (
@@ -34,16 +37,16 @@ export default function Contact() {
                 href={social.url} 
                 target="_blank" 
                 rel="noreferrer"
-                className="hover:text-white transition-colors duration-200 hover:-translate-y-1 transform"
+                className="bg-stone-50 p-3 rounded-full border border-stone-200 hover:text-stone-900 hover:shadow-sm hover:-translate-y-1 transition-all duration-300"
                 aria-label={social.name}
               >
-                <Icon size={24} />
+                <Icon size={20} />
               </a>
             )
           })}
         </div>
 
-        <p className="text-sm text-slate-500">
+        <p className="text-xs text-stone-400">
           &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>
 

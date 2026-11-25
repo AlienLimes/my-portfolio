@@ -8,13 +8,18 @@ export const profile = {
 export const projects = [
   {
     title: "Project One",
-    description: " description",
+    description: "One-line description of what it does.",
     link: "https://github.com/yourusername/project-one",
   },
   {
     title: "Project Two",
-    description: "description ",
+    description: "One-line description of what it does.",
     link: "https://github.com/yourusername/project-two",
+  },
+  {
+    title: "Project Three", // <-- Add this new one
+    description: "A short description of your third project.",
+    link: "https://github.com/yourusername/project-three",
   },
 ];
 
