@@ -1,10 +1,14 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-center gap-8">
-        <a href="#about" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">About</a>
-        <a href="#projects" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Portfolio</a>
-        <a href="#contact" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Contact</a>
+    // Fixed floating "pill" navbar
+    <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center">
+      <div className="bg-white/80 backdrop-blur-md border border-stone-200 shadow-sm rounded-full px-8 py-3 flex items-center gap-8">
+        <span className="text-sm font-bold tracking-tight text-stone-800">Kriszti</span>
+        <div className="flex items-center gap-6">
+          <a href="#about" className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors">About</a>
+          <a href="#projects" className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors">Projects</a>
+          <a href="#contact" className="text-xs font-medium text-stone-500 hover:text-stone-900 transition-colors">Contact</a>
+        </div>
       </div>
     </nav>
   )
